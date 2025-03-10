@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    environment {
+    name = "rushali"
+    user = "myusername"
+    }
+    stages {
+        stage('environment variables') {
+            steps {
+                sh 'echo "($BUILD_ID)"'
+                sh 'echo "($name)"'
+                   sh 'echo "($user)"'
+          }
+        }
+    }
+}
